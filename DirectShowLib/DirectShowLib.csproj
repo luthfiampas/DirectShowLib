@@ -8,7 +8,7 @@
     <FileVersion>1.0.0</FileVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>DirectShowLib</PackageId>
+    <PackageId>DirectShowLib.Standard</PackageId>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/luthfiampas/DirectShowLib</PackageProjectUrl>
     <PackageTags>directshow</PackageTags>
