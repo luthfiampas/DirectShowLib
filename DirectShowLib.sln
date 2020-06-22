@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectShowLib", "DirectShowLib\DirectShowLib.csproj", "{3DDD6823-855B-427E-B11D-58C1888E5BDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DDD6823-855B-427E-B11D-58C1888E5BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DDD6823-855B-427E-B11D-58C1888E5BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DDD6823-855B-427E-B11D-58C1888E5BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DDD6823-855B-427E-B11D-58C1888E5BDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D60F7A2-DDCA-4CD4-AC3B-EBB7BA0995E3}
+	EndGlobalSection
+EndGlobal

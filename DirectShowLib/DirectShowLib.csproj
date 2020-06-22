@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyTitle>DirectShow Net Library</AssemblyTitle>
+    <AssemblyVersion>2.1.0</AssemblyVersion>
+    <Copyright>GNU Lesser General Public License v2.1</Copyright>
+    <Description>.NET Interfaces for calling DirectShow. This is port/fork of DirectShowLib (http://directshownet.sourceforge.net) for .NET 4.5 and .NET Standard 2.0.</Description>
+    <FileVersion>1.0.0</FileVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>DirectShowLib</PackageId>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/luthfiampas/DirectShowLib</PackageProjectUrl>
+    <PackageTags>directshow</PackageTags>
+    <RepositoryUrl>https://github.com/luthfiampas/DirectShowLib</RepositoryUrl>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--see: https://github.com/NuGet/docs.microsoft.com-nuget/issues/1228#issuecomment-448718311-->
+    <None Include="..\LICENSE" Pack="true" Visible="false" PackagePath="" />
+    <Compile Remove="nupkg\**" />
+    <EmbeddedResource Remove="nupkg\**" />
+    <None Remove="nupkg\**" />
+  </ItemGroup>
+
+</Project>
