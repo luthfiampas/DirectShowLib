@@ -4,6 +4,7 @@
     <AssemblyTitle>DirectShow Net Library</AssemblyTitle>
     <AssemblyVersion>2.1.0</AssemblyVersion>
     <Authors>Luthfi Tri Atmaja</Authors>
+    <Company>DirectShowLib</Company>
     <Copyright>GNU Lesser General Public License v2.1</Copyright>
     <Description>.NET Interfaces for calling DirectShow. This is port/fork of DirectShowLib (http://directshownet.sourceforge.net) for .NET 4.5 and .NET Standard 2.0.</Description>
     <FileVersion>2.1.0</FileVersion>
