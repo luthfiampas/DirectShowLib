@@ -1619,8 +1619,7 @@ namespace DirectShowLib
             try
             {
                 // Walk the pins looking for a match
-                int fetched;
-                while (ppEnum.Next(1, pPins, out fetched) >= 0 && (fetched == 1))
+                while (ppEnum.Next(1, pPins, IntPtr.Zero) == 0)
                 {
                     // Read the direction
                     hr = pPins[0].QueryDirection(out ppindir);
@@ -1637,12 +1636,13 @@ namespace DirectShowLib
                         }
                         iIndex--;
                     }
-                    DsUtils.ReleaseComObject(pPins[0]);
+
+                    Marshal.ReleaseComObject(pPins[0]);
                 }
             }
             finally
             {
-                DsUtils.ReleaseComObject(ppEnum);
+                Marshal.ReleaseComObject(ppEnum);
             }
 
             return pRet;
@@ -1674,8 +1674,7 @@ namespace DirectShowLib
             try
             {
                 // Walk the pins looking for a match
-                int fetched;
-                while (ppEnum.Next(1, pPins, out fetched) >= 0 && fetched == 1)
+                while (ppEnum.Next(1, pPins, IntPtr.Zero) == 0)
                 {
                     // Read the info
                     hr = pPins[0].QueryPinInfo(out ppinfo);
@@ -1688,13 +1687,14 @@ namespace DirectShowLib
                         pRet = pPins[0];
                         break;
                     }
-                    DsUtils.ReleaseComObject(pPins[0]);
+
+                    Marshal.ReleaseComObject(pPins[0]);
                     DsUtils.FreePinInfo(ppinfo);
                 }
             }
             finally
             {
-                DsUtils.ReleaseComObject(ppEnum);
+                Marshal.ReleaseComObject(ppEnum);
             }
 
             return pRet;
@@ -1726,8 +1726,7 @@ namespace DirectShowLib
             try
             {
                 // Walk the pins looking for a match
-                int fetched;
-                while (ppEnum.Next(1, pPins, out fetched) >= 0 && fetched == 1)
+                while (ppEnum.Next(1, pPins, IntPtr.Zero) == 0)
                 {
                     // Is it the right category?
                     if (DsUtils.GetPinCategory(pPins[0]) == PinCategory)
@@ -1740,12 +1739,13 @@ namespace DirectShowLib
                         }
                         iIndex--;
                     }
-                    DsUtils.ReleaseComObject(pPins[0]);
+
+                    Marshal.ReleaseComObject(pPins[0]);
                 }
             }
             finally
             {
-                DsUtils.ReleaseComObject(ppEnum);
+                Marshal.ReleaseComObject(ppEnum);
             }
 
             return pRet;
@@ -1778,8 +1778,7 @@ namespace DirectShowLib
             try
             {
                 // Walk the pins looking for a match
-                int fetched;
-                while (ppEnum.Next(1, pPins, out fetched) >= 0 && fetched == 1)
+                while (ppEnum.Next(1, pPins, IntPtr.Zero) == 0)
                 {
                     // Read the connected status
                     hr = pPins[0].ConnectedTo(out pOutPin);
@@ -1790,12 +1789,11 @@ namespace DirectShowLib
                         DsError.ThrowExceptionForHR(hr);
 
                         // The ConnectedTo call succeeded, release the interface
-                        DsUtils.ReleaseComObject(pOutPin);
+                        Marshal.ReleaseComObject(pOutPin);
                     }
 
                     // Is it the right status?
-                    if ((hr == 0 && vStat == PinConnectedStatus.Connected)
-                        || (hr == DsResults.E_NotConnected && vStat == PinConnectedStatus.Unconnected))
+                    if ((hr == 0 && vStat == PinConnectedStatus.Connected) || (hr == DsResults.E_NotConnected && vStat == PinConnectedStatus.Unconnected))
                     {
                         // Is is the right index?
                         if (iIndex == 0)
@@ -1803,14 +1801,16 @@ namespace DirectShowLib
                             pRet = pPins[0];
                             break;
                         }
+
                         iIndex--;
                     }
-                    DsUtils.ReleaseComObject(pPins[0]);
+
+                    Marshal.ReleaseComObject(pPins[0]);
                 }
             }
             finally
             {
-                DsUtils.ReleaseComObject(ppEnum);
+                Marshal.ReleaseComObject(ppEnum);
             }
 
             return pRet;
