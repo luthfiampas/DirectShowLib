@@ -7,7 +7,6 @@
     <Company>DirectShowLib</Company>
     <Copyright>GNU Lesser General Public License v2.1</Copyright>
     <Description>.NET Interfaces for calling DirectShow. This is port/fork of DirectShowLib (http://directshownet.sourceforge.net) for .NET 4.5 and .NET Standard 2.0.</Description>
-    <FileVersion>2.1.0</FileVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>DirectShowLib.Standard</PackageId>
@@ -16,6 +15,7 @@
     <PackageTags>directshow</PackageTags>
     <RepositoryUrl>https://github.com/luthfiampas/DirectShowLib</RepositoryUrl>
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <Version>2.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
