@@ -12,6 +12,7 @@
     <PackageId>DirectShowLib.Standard</PackageId>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/luthfiampas/DirectShowLib</PackageProjectUrl>
+    <PackageReleaseNotes>IEnumXXX interfaces use IntPtr rather than out int</PackageReleaseNotes>
     <PackageTags>directshow</PackageTags>
     <RepositoryUrl>https://github.com/luthfiampas/DirectShowLib</RepositoryUrl>
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
